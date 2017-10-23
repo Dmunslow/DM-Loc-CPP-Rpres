@@ -1,0 +1,95 @@
+---
+title: "Presentations in R"
+author: "Caffo"
+date: "June 5, 2017"
+output:
+  ioslides_presentation: default
+  slidy_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## My new slide
+some content
+
+***
+A slide without a title 
+
+## Title
+### A top level subheading
+#### A second subheading
+
+
+## My title
+
+- Bullet 1
+- Bullet 2
+
+
+1. Item a
+2. Item b
+
+
+## Formating options 
+
+Plain Text
+
+*italicized text*
+
+**bold text**
+
+`for (i %in% 1 : 10)`
+ 
+ 
+## Running Rcode
+ 
+```{r test}  
+head(mtcars)
+ 
+```
+
+
+## Running Code2
+
+```{r test2, comment  = "", echo = T}
+
+# remove pound characters from code output using comment = ""
+head(mtcars)
+
+```
+
+
+## Show code without evaluating it 
+
+```{r test3, comment  = "", echo = T, eval = F}
+
+# remove pound characters from code output using comment = ""
+head(mtcars)
+
+```
+
+
+## Show Plots
+
+```{r plot}
+
+plot(mtcars$wt, mtcars$mpg, xlab = "Weight", ylab = "MPG")
+
+```
+
+
+## Show Plots - Figure options
+
+```{r plot2, fig.align ='center', fig.cap='My Awesome Figure'}
+
+plot(mtcars$wt, mtcars$mpg, xlab = "Weight", ylab = "MPG")
+
+```
+
+
+
+
+

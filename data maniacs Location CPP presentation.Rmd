@@ -1,0 +1,43 @@
+---
+title: "Location Based CPP Detection with RStudio"
+author: "Duncan Munslow - Fraud Data Analyst"
+date: "October 22, 2017"
+output: ioslides_presentation
+widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## CPP - Common Point of Purchase
+
+- Primary tool we use to identify a point of compromise for a group of cards
+ 
+    - We pull the transaction history for all of the cards and identify common merchants 
+     
+ 
+ - INSERT HEADER OF CPP TABLE
+
+## How do we identify groups of cards for CPPs?
+
+- Sometimes, we see multiple cards with very similar or identical fraud, which were all compromised at the same location
+
+    - These are the easiest breaches to identify 
+
+- Many fraudsters know this makes our job easy, so they use techniques to make groups of cards compromised at the same location hard to identify:
+
+    - "Making Sausage" - Use cards from mulitple different breaches
+
+    - Spread use of breached cards accross weeks or months m
+
+> - But what if there's another way...
+
+## Using Location to identify points of compromise
+
+- Assuming Customers will use businesses close to their home, and eventually, some of those businesses will be compromised
+
+> - If we map out the home addresses of cards that have been compromised - we may be able identify clusters of cards which we can run CPP analysis on
+
+> - We can do this (for FREE!) using RStudio
+
